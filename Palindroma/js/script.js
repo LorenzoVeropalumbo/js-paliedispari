@@ -16,9 +16,11 @@ function isPalindrom (checkPalindrom) {
   if(checkPalindrom == reverseWorld){
       
     bool = true;
+    alert("è Palindroma");
 
   } else {
 
+    alert("non è Palindroma");
     return bool = false;
   }
     // return della function
