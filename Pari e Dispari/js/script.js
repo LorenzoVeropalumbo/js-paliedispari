@@ -33,6 +33,7 @@ let evenOrOdd = isEvenOrOdd(sum);
 console.log(userNumber);
 console.log(aiNumbers);
 
+// Controllo chi ha vinto
 if(evenOrOdd === userOddOrEven){
 
   console.log("hai vinto");

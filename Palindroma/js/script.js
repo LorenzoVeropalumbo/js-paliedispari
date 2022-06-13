@@ -26,7 +26,7 @@ function isPalindrom (checkPalindrom) {
 }
 
 // chiedo all'utente la parola
-let userWold = prompt("").toLowerCase();
+let userWold = prompt("dimmi una parola").toLowerCase();
 
 // richiamo la funzione
 let returnValue = isPalindrom(userWold);
