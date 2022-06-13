@@ -2,33 +2,27 @@
 // faccio un if per comparere le parlore dall' ultima alla prima
 function isPalindrom (checkPalindrom) {
 
-  // variabile per la comparazione
-  let counter = 0;
   // risulatato della function
   let bool = false;
-  
+  let reverseWorld = "";
+
   for (let i = checkPalindrom.length - 1; i >= 0; i--) {
 
     // prendo lettera per lettera
-    const palindomWorld = checkPalindrom[i];
-    const reverseWorld = checkPalindrom[counter];
+    reverseWorld += checkPalindrom[i];
+  }
 
-    // le paragono per vedere se sono palindrome
-    if(palindomWorld == reverseWorld){
+  // le paragono per vedere se sono palindrome
+  if(checkPalindrom == reverseWorld){
       
-      bool = true;
+    bool = true;
 
-    } else {
+  } else {
 
-      return bool = false;
-    }
-
-    // incremento la variabile
-    counter++;
-    
+    return bool = false;
+  }
     // return della function
     return bool;
-  }
 }
 
 // chiedo all'utente la parola

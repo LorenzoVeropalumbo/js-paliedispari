@@ -1,41 +1,42 @@
-// faccio un for per scorrere la parola
-// faccio un if per comparere le parlore dall' ultima alla prima
-function isPalindrom (checkPalindrom) {
-
-  // variabile per la comparazione
-  let counter = 0;
-  // risulatato della function
-  let bool = false;
-  
-  for (let i = checkPalindrom.length - 1; i >= 0; i--) {
-
-    // prendo lettera per lettera
-    const palindomWorld = checkPalindrom[i];
-    const reverseWorld = checkPalindrom[counter];
-
-    // le paragono per vedere se sono palindrome
-    if(palindomWorld == reverseWorld){
-      
-      bool = true;
-
-    } else {
-
-      return bool = false;
-    }
-
-    // incremento la variabile
-    counter++;
-    
-    // return della function
-    return bool;
-  }
+// genera un numero random da 1 a 5
+function randomNumber() {
+  return Math.floor(Math.random() * 5) + 1;
 }
 
-// chiedo all'utente la parola
-let userWold = prompt("");
+// genera un numero random da 1 a 5
+function isEvenOrOdd(numberToCheck) {
+  
+  let checkOddOrEven = "pari";
 
-// richiamo la funzione
-let returnValue = isPalindrom(userWold);
+  if(numberToCheck % 2 !== 0){
+    
+    checkOddOrEven = "dispari";
+  }
 
-// printo il risultato della funzione
-console.log(returnValue);
+  return checkOddOrEven;
+}
+
+// l'utente sceglie se pari o dispari
+const userOddOrEven = prompt("Scegli se pari o dispari").toLocaleLowerCase();
+
+// l'utente sceglie un numero da 1 a 5
+const userNumber = parseInt(prompt("Scegli un numero da 1 a 5"));
+
+// mi salvo il numero del pc
+let aiNumbers = randomNumber();
+
+//  li sommo
+let sum = aiNumbers + userNumber;
+
+let evenOrOdd = isEvenOrOdd(sum);
+
+console.log(userNumber);
+console.log(aiNumbers);
+
+if(evenOrOdd === userOddOrEven){
+
+  console.log("hai vinto");
+} else {
+
+  console.log("hai perso");
+}
